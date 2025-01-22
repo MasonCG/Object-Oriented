@@ -35,7 +35,7 @@ cherrypy.quickstart(
         },
         "/css":{
             "toos.staticdir.on": True,
-            "tools.staticdir.dir": f"{srcdir}/../css"
+            "tools.staticdir.dir": f"{srcdir}/../../css"
         }
 
     }
