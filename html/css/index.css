@@ -1,0 +1,16 @@
+header {
+    background-color: blue;
+    text-align: right;
+    padding: 2em;
+}
+
+header a{
+    color: lightgray;
+    transition: ease 250ms;
+    text-decoration: none;
+
+}
+
+header a:hover {
+    color: white;
+}
