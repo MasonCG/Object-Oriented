@@ -14,6 +14,5 @@ lookup = mako.lookup.TemplateLookup(
 )
 
 def get():
-
     T = lookup.get_template("index.html")
     return T.render()
