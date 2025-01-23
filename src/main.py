@@ -1,11 +1,21 @@
 import cherrypy
 import os.path
+import mako.template
+import mako.lookup
 
 #we have modules for each page we're displaying 
 import page_index
 import page_signup
 import page_posts
-import page_test
+
+#the location where the main.py file is stored: The src folder
+
+lookup = mako.lookup.TemplateLookup(
+    directories=[
+        os.path.dirname(__file__),
+        f"{os.path.dirname(__file__)}/../html"
+    ]
+)
 
 class App:
     @cherrypy.expose
@@ -17,12 +27,6 @@ class App:
     @cherrypy.expose
     def posts(self):
         return page_posts.get()
-    @cherrypy.expose
-    def test(self):
-        return page_test.get()
-        
-#the location where the main.py file is stored: The src folder
-srcdir = os.path.abspath(os.path.dirname(__file__))
 
 app = App()
 cherrypy.quickstart(
@@ -31,7 +35,7 @@ cherrypy.quickstart(
     {
         "/html": {
             "tools.staticdir.on": True,
-            "tools.staticdir.dir": f"{srcdir}/../html"
+            "tools.staticdir.dir": f"{os.path.abspath(__file__)}/../html"
         }
     }
 )

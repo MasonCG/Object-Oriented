@@ -4,3 +4,71 @@ header {
     text-align: center;
     padding: 2em;
 }
+
+h1 {
+    font-size: 2rem;
+    text-transform:uppercase ;
+}
+
+body {
+    display: flex;
+    background: linear-gradient(to right, violet, lightblue);
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    margin: 3rem;
+    border-radius: 10px;
+    min-width: 30%;
+    overflow: hidden;
+    background-color: white;
+}
+
+
+
+.inputs {
+    text-align: center;
+    padding: 2rem 5rem;
+}
+
+.fa-cont{
+    display: flex;
+    padding: .6rem .2rem;
+    border-bottom: 2px solid lightgray;
+    align-items: center;
+    transition: ease 250ms;
+
+}
+
+.fa-cont i {
+    padding-right: .6rem;
+}
+
+.fa-cont:hover{
+    border-bottom: 2px solid black;
+}
+
+.inputs input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: large
+}
+
+
+
+.inputs button{
+    margin-top: 2rem;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 25px;
+    background: coral;
+    transition: ease 250ms;
+    font-size: 2ch;
+}
+
+.inputs button:hover{
+    background-color: red;
+}
+
