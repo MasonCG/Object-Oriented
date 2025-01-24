@@ -4,13 +4,32 @@ header {
     padding: 2em;
 }
 
+
 header a{
     color: lightgray;
     transition: ease 250ms;
     text-decoration: none;
-
 }
 
 header a:hover {
     color: white;
+}
+
+ul {
+    padding: 2rem;
+    list-style: none;
+}
+
+li {
+    padding: .2rem;
+}
+
+section a {
+    color: gray;
+    text-decoration: none;
+    transition: ease 250ms;
+}
+
+section a:hover {
+    color: black;
 }

@@ -1,0 +1,55 @@
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.posts-cont {
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+.post {
+    margin-block: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.post > * {
+    padding-inline: 1rem;
+}
+
+.post:nth-child(odd) {
+    background-color: whitesmoke;
+}
+
+.post-btm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-block: .6rem;
+}
+
+img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+hr {
+    border: .5px solid lightgray;
+    border-radius: 5px;
+    margin-block: .6rem;
+}
+
+

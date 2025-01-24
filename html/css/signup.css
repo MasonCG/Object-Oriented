@@ -14,7 +14,7 @@ body {
     display: flex;
     background: linear-gradient(to right, violet, lightblue);
     justify-content: center;
-    align-items: center;
+    
 }
 
 section {
