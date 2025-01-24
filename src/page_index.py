@@ -1,9 +1,8 @@
 import mako.template
 import mako.lookup
 import os.path
+import random
 
-#demo
-import datetime
 
 #location of this file
 lookup = mako.lookup.TemplateLookup(
@@ -13,6 +12,8 @@ lookup = mako.lookup.TemplateLookup(
     ]
 )
 
+names = ["Mason", "Jimmy", "George", "Wally"]
+
 def get():
     T = lookup.get_template("index.html")
-    return T.render()
+    return T.render(name=random.choice(names))

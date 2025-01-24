@@ -7,6 +7,7 @@ import mako.lookup
 import page_index
 import page_signup
 import page_posts
+import page_test
 
 #the location where the main.py file is stored: The src folder
 
@@ -21,12 +22,16 @@ class App:
     @cherrypy.expose
     def index(self):
         return page_index.get()
+    
     @cherrypy.expose
     def signup(self):
         return page_signup.get()
     @cherrypy.expose
     def posts(self):
         return page_posts.get()
+    @cherrypy.expose
+    def test(self):
+        return page_test.get()
 
 app = App()
 cherrypy.quickstart(
