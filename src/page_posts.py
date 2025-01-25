@@ -4,6 +4,8 @@ import os.path
 import images
 import random
 
+import datetime
+
 #location of this file
 lookup = mako.lookup.TemplateLookup(
     directories=[
@@ -12,13 +14,15 @@ lookup = mako.lookup.TemplateLookup(
     ]
 )
 
-imgs = images.get_images()
-img = random.choice(imgs)
+imgdict = images.get_images()
 
 def get():
-
+    today=datetime.datetime.now()
     T = lookup.get_template("posts.html")
     return T.render(
-        image=img
+        image= imgdict[random.choice(list(imgdict.keys()))],
+        postList = imgdict.keys(),
+        lastPosted=f"{today.month}/{today.day}/{today.year}",
+        views = random.randint(5, 7842)
         )
     

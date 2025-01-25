@@ -7,21 +7,23 @@
     </head>
     <body>
        <section class="posts-cont">
+        % for postID in postList:
             <div class="post">
                 <div class="img-cont">
-                    <img src="/${image}" alt="users profile">
+                    <img src="/html/media/${image}" alt="users profile">
                 </div>
                 <div>
-                    <h2> ${image} </h2>
+                    <h2> ${postID} </h2>
                     <hr>
                     <p class="post-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore doloribus ipsa provident fugit amet beatae officiis officia error ducimus facilis recusandae minus deleniti libero voluptates nesciunt nisi eos, asperiores repellendus!</p>
                     <hr>
                     <div class="post-btm">
-                    <p class="post-date">1 week ago</p>
-                    <p class="post-views">views: 12345</p>
+                    <p class="post-date">${lastPosted}</p>
+                    <p class="post-views">views: ${views}</p>
                     </div>
                 </div>
             </div>
+        % endfor
                         
        </section>
     </body>

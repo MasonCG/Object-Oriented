@@ -2,6 +2,7 @@
 body {
     display: flex;
     justify-content: center;
+    background: #333;
 }
 
 .posts-cont {
@@ -10,6 +11,7 @@ body {
     justify-content: center;
     flex-direction: column;
     max-height: 80vh;
+    border-radius: 10px;
     overflow: auto;
 }
 
@@ -19,9 +21,7 @@ body {
     flex-direction: row;
     align-items: center;
     background-color: white;
-    border-radius: 10px;
     justify-content: space-around;
-    padding: 1rem;
 }
 
 .post > * {
