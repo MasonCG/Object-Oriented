@@ -2,9 +2,6 @@ import mako.template
 import mako.lookup
 import os.path
 
-#demo
-import datetime
-
 #location of this file
 lookup = mako.lookup.TemplateLookup(
     directories=[

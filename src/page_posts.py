@@ -5,8 +5,8 @@ import os.path
 #location of this file
 lookup = mako.lookup.TemplateLookup(
     directories=[
-        os.path.abspath(__file__),
-        f"{os.path.abspath(__file__)}../html"    
+        os.path.dirname(__file__),
+        f"{os.path.dirname(__file__)}/../html"    
     ]
 )
 
