@@ -12,16 +12,16 @@
 
             <div class="post">
                 <div class="img-cont">
-                    <img src="/html/media/${image}" alt="users profile">
+                    <img src="/html/media/${image[postID]}" alt="users profile">
                 </div>
-                <div>
+                <div class="post-description-cont">
                     <h2> ${postID} </h2>
                     <hr>
-                    <p class="post-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore doloribus ipsa provident fugit amet beatae officiis officia error ducimus facilis recusandae minus deleniti libero voluptates nesciunt nisi eos, asperiores repellendus!</p>
+                    <p class="post-caption">${description[postID]}</p>                    
                     <hr>
                     <div class="post-btm">
-                    <p class="post-date">${lastPosted}</p>
-                    <p class="post-views">views: ${views}</p>
+                    <p class="post-date">${lastPosted[loop.index]} days ago</p>
+                    <p class="post-views">views: ${views[loop.index]}</p>
                     </div>
                 </div>
             </div>
