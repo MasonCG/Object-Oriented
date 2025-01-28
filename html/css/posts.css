@@ -12,16 +12,16 @@ body {
     flex-direction: column;
     max-height: 80vh;
     border-radius: 10px;
+    margin: 2rem;
     overflow: auto;
 }
 
 .post {
-    margin-block: 1rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: white;
-    justify-content: space-around;
+    background-color: white;    
+    padding-top: .6rem;
 }
 
 .post > * {
