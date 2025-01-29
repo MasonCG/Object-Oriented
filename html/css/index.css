@@ -1,7 +1,8 @@
 header {
-    background-color: blue;
+    background-color: darkblue;
     text-align: right;
-    padding: 2em;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -9,19 +10,34 @@ header a{
     color: lightgray;
     transition: ease 250ms;
     text-decoration: none;
+    padding-inline: 2rem;
+}
+
+header > *{
+    flex: 50%;
 }
 
 header a:hover {
     color: white;
 }
 
-ul {
-    padding: 2rem;
+.nav-bar ul {
+    display: flex;
     list-style: none;
 }
+.nav-bar ul > *{
+    border: 1px solid violet;
+    flex: 1;
+    text-align: center;
+    padding-block: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 5px solid darkblue;
+    transition: ease 250ms;
+}
 
-li {
-    padding: .2rem;
+.nav-bar ul > *:hover {
+    border-bottom: 5px solid white;
 }
 
 section a {

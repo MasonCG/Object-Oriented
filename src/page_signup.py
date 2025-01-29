@@ -1,6 +1,8 @@
 import mako.template
 import mako.lookup
 import os.path
+import names
+
 
 #demo
 import datetime
@@ -15,4 +17,4 @@ lookup = mako.lookup.TemplateLookup(
 
 def get():
     T = lookup.get_template("signup.html")
-    return T.render()
+    return T.render(name = names.get_name())

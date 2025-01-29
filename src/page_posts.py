@@ -1,8 +1,10 @@
 import mako.lookup
 import mako.template
 import os.path
-import images
 import random
+
+import images
+import names
 
 import datetime
 
@@ -57,6 +59,7 @@ def get():
     T = lookup.get_template("posts.html")
     random.shuffle(imgKeys)
     return T.render(
+        name = names.get_name(),
         image= imgdict,
         postList = imgKeys,
         description = description_dict,

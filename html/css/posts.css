@@ -1,9 +1,4 @@
 
-body {
-    display: flex;
-    justify-content: center;
-    background: lightblue;
-}
 
 .posts-cont {
     max-width: 80%;
@@ -11,8 +6,18 @@ body {
     flex-direction: column;
     max-height: 90vh;
     border-radius: 10px;
-    margin: 2rem;
+    margin: .2rem;
     overflow: auto;
+    justify-self: center;
+}
+
+.posts-cont h1 {
+    background-color: #483C32;
+    color: white;
+    padding: 2rem;
+    font-size: xx-large;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .post {
