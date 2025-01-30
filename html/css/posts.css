@@ -20,6 +20,11 @@
     text-transform: uppercase;
 }
 
+.posts-cont h2 {
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
 .post {
     display: flex;
     flex-direction: row;

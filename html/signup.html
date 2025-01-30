@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="/html/css/signup.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
+        <script src="/html/javascript/signup.js"></script>
     </head>
     <body>
 
@@ -18,22 +19,22 @@
         <div class="inputs">
             <div class="fa-cont">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                <input type="text" placeholder="email">
+                <input id="email" type="text" placeholder="email">
             </div>
             <div class="fa-cont">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="text" placeholder="real name">
+                <input id="name" type="text" placeholder="real name">
             </div>
             <div class="fa-cont">
                 <i class="fa fa-lock" aria-hidden="true"></i>
-                <input type="password" placeholder="password">
+                <input id="password" type="password" placeholder="password">
             </div>
 
             <div class="fa-cont">
                 <i class="fa fa-birthday-cake" aria-hidden="true"></i>
-                <input type="date" placeholder="mm/dd/yyyy">
+                <input id="bday" type="date" placeholder="mm/dd/yyyy">
             </div>
-            <button onclick="Signup()">Sign up</button>
+            <button onclick="signup()">Sign up</button>
         </div>
             
         </div>
