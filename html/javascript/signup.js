@@ -1,4 +1,6 @@
 
+inputFlagRaised = false;
+
 function inputFlag(elementId, message="Please fill out this field"){
     // custom inputer flag function
     // creates a div with a text node into given element with given message
@@ -8,12 +10,8 @@ function inputFlag(elementId, message="Please fill out this field"){
     newDiv.append(newP);
     newDiv.className = "inputFlag"
 
-    // checking if same element already has an input flag and removing it.
-    /*
-    for (let i = 0; i < cont.children; i++){
-        if 
-    }
-    */
+
+    inputFlagRaised = true;
     cont.insertBefore(newDiv, cont.children[0]);
 }
 
@@ -96,7 +94,18 @@ function signup(){
         inputFlag("email-cont", message);
      }
  
-     return;
+
+    if (!inputFlagRaised){
+        alert(
+            "email: " + email + "\n" + 
+            "name: " + name + "\n" + 
+            "password: " + password + "\n" + 
+            "Birthday: " + birthdate + "\n"
+        );
+    }
+
+
+    return;
  
  }
 

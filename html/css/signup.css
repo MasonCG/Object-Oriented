@@ -15,7 +15,8 @@ section {
     flex-direction: column;
     margin: 3rem;
     border-radius: 10px;
-    min-width: 30%;
+    width: 35%;
+    min-width: 500px;
     overflow: hidden;
     background-color: white;
     justify-self: center;
@@ -34,11 +35,23 @@ section {
     align-items: center;
     transition: ease 250ms;
     margin: 1rem;
+    flex-wrap: wrap;
 
 }
 
 .fa-cont i {
     padding-right: .6rem;
+}
+
+.inputFlag{
+    flex: 1 1 100%;
+    order: -1;
+    text-align: left;
+    color: red;
+    font-size: smaller;
+    font-weight: bold;
+    padding-bottom: .3rem;
+
 }
 
 .fa-cont:hover{
@@ -48,8 +61,7 @@ section {
 .inputs input {
     border: none;
     outline: none;
-    width: 100%;
-    font-size: large
+    min-width: 90%;
 }
 
 
