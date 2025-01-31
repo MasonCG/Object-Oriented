@@ -1,89 +1,102 @@
-const fs = require("fs");
 
+function inputFlag(elementId, message="Please fill out this field"){
+    // custom inputer flag function
+    // creates a div with a text node into given element with given message
+    let cont = document.getElementById(elementId);
+    let newDiv = document.createElement("div");
+    let newP = document.createTextNode("*"+message);
+    newDiv.append(newP);
+    newDiv.className = "inputFlag"
 
-function allFieldsAlert(){
-    alert("Please enter something in all fields.");
+    // checking if same element already has an input flag and removing it.
+    /*
+    for (let i = 0; i < cont.children; i++){
+        if 
+    }
+    */
+    cont.insertBefore(newDiv, cont.children[0]);
 }
 
 function signup(){
-    let birthdate = document.getElementById("bday").value;
-    let name = document.getElementById("name").value;
-    let password = document.getElementById("password").value;
-    let email = document.getElementById("email").value;
 
 
-    // birthday error handling
-    bday = new Date(birthdate)
-    ageRequirement = 13 * 365 * 24 * 60 * 60 * 1000;
+    inputContainers = document.getElementsByClassName("fa-cont");
+    for (let i = 0; i < inputContainers.length; i++){
 
-    if (birthdate.length < 1){
-        allFieldsAlert();
-        return;
-    }
+        inputCont = inputContainers[i]
+        contChildren = inputCont.children;
+        for (let j = 0; j < contChildren.length; j++){
 
-    if (Date.now() - bday < ageRequirement){
-        alert("You do not pass age requirement of 13 years old.")
-        return;
-    } 
+            
+            if (contChildren[j].className == "inputFlag"){
+                inputCont.removeChild(contChildren[j]);
 
-    // error handling name entries
-    if (name.length < 1){
-        allFieldsAlert();
-        return;
-    }
-    
-    // passwrod error handling
-    if (password.length < 1){
-        allFieldsAlert();
-        return;
-    } else if (password.length < 8) {
-        alert("Plase make your password at least 8 characters.")
-        return;
-    }
-    
-
-    // email error handling
-    if (email.length < 1){
-        allFieldsAlert();
-        return;
-    } 
-
-    hasAt = false;
-
-    for (let i = 0; i < email.length; i++){
-
-        if (email[i] == "@"){
-            hasAt = true;
-        }
-    }
-
-    if (!hasAt){
-        alert("Your email has no '@' symbol.");
-        return;
-    }
-
-    if (email[0] === "@"){
-        alert("The '@' symbol cannot come first.");
-        return;
-    }
-
-    
-
-    if (email[email.length - 1] === "@"){
-        alert("The '@' symbol cannot come last.");
-        return;
+            }
+        } 
     }
 
 
-    alert("Birthday: " + birthdate + "\n" + 
-        "Email: " + email + "\n" + 
-        "Password: " + "***********" + "\n" + 
-        "Name: " + name
-    )
+    let bdayInput = document.getElementById("bday");
+    let birthdate = bdayInput.value;
+    let nameInput = document.getElementById("name");
+    let name = nameInput.value;
+    let passwordInput = document.getElementById("password");
+    let password = passwordInput.value;
+    let emailInput = document.getElementById("email");
+    let email = emailInput.value;
 
-    allData = "email=" + email + "," + "name=" + name + 
-                "," + "password=" + password + "," + "birthdate=" + birthdate;
 
-    return;
+     // birthday error handling
+     bday = new Date(birthdate)
+     ageRequirement = 13 * 365 * 24 * 60 * 60 * 1000;
+ 
+     if (birthdate.length < 1){
+        inputFlag("bday-cont")
+     } else if (Date.now() - bday < ageRequirement){
+        message = "You do not meet the 13 year age requirement."
+        inputFlag("bday-cont", message);
+     } 
 
-}
+     if (name.length < 1){
+        inputFlag("name-cont");
+     }
+     
+     // passwrod error handling
+
+
+     if (password.length < 1){
+        inputFlag("password-cont");
+     } else if (password.length < 8) {
+        message = "Plase make your password at least 8 characters.";
+        inputFlag("password-cont", message);
+    }
+     
+ 
+     // email error handling
+     
+     hasAt = false;
+ 
+     for (let i = 0; i < email.length; i++){
+ 
+         if (email[i] == "@"){
+             hasAt = true;
+         }
+     }
+
+     if (email.length < 1){
+        inputFlag("email-cont");
+     } else if (!hasAt){
+        message = "Your email has no '@' symbol.";
+        inputFlag("email-cont", message);
+     } else if (email[0] === "@"){
+        message = "The '@' symbol cannot come first.";
+        inputFlag("email-cont", message);
+     } else if (email[email.length - 1] === "@"){
+        message = "The '@' symbol cannot come last.";
+        inputFlag("email-cont", message);
+     }
+ 
+     return;
+ 
+ }
+
