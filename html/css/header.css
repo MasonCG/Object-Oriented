@@ -1,0 +1,44 @@
+header {
+    background-color: darkblue;
+    text-align: right;
+    display: flex;
+    align-items: center;
+}
+
+
+header a{
+    color: lightgray;
+    transition: ease 250ms;
+    text-decoration: none;
+    padding-inline: 2rem;
+}
+
+header > *{
+    flex: 100%;
+}
+
+
+header a:hover {
+    color: white;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.nav-bar ul > *{
+    flex: 1;
+    text-align: center;
+    padding-block: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 5px solid darkblue;
+    transition: ease 250ms;
+    min-height: 100%;
+}
+
+.nav-bar ul > *:hover {
+    border-bottom: 5px solid white;
+}
+

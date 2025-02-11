@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Create Posts</title>
+        <link rel="stylesheet" href="/html/css/main.css">
+        <link rel="stylesheet" href="/html/css/makepost.css">
+        <script src="/html/javascript/main.js"></script>
+
+    </head>
+    <body>
+
+        <%include file="header.html"/>
+
+       <section>
+
+        <h1>Create a Post</h1>
+
+            <div class="form">
+                <div class="img-cont input-cont" id="pic-cont">
+                    <p>Profile Picture</p>
+                    <input id="pic-input" type="file"  style="display:none;" onchange="uploadPic()">
+                    <label for="pic-input" class="file-input">
+                        <div id="v" class="plus"></div>
+                        <div id="h" class="plus"></div>
+                        <img id="post-pic"></label>
+                    
+                    
+
+                </div>
+                <div class="post-description-cont">
+                    <div id="title-cont" class="input-cont">
+                        <input id="title-input" class="text-input" type="text" placeholder="Add title Here">
+                    </div>
+                    <div id="caption-cont" class="input-cont">
+                        <textarea id="caption-input" class="text-input post-caption" type="text" placeholder="Add caption here"></textarea>                   
+                    </div>
+                    <div class="button-cont">
+                        <button onclick="createPost()">Post</button>
+                    </div>
+                </div>
+                
+            </div>
+        
+                        
+       </section>
+    </body>

@@ -1,6 +1,7 @@
 import mako.template
 import mako.lookup
 import os.path
+import names
 
 #location of this file
 lookup = mako.lookup.TemplateLookup(
@@ -11,5 +12,5 @@ lookup = mako.lookup.TemplateLookup(
 )
 
 def get(name):
-    T = lookup.get_template("index.html")
+    T = lookup.get_template("makepost.html")
     return T.render(name=name)

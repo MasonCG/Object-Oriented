@@ -15,6 +15,6 @@ lookup = mako.lookup.TemplateLookup(
     ]
 )
 
-def get():
+def get(name):
     T = lookup.get_template("signup.html")
-    return T.render(name = names.get_name())
+    return T.render(name=name)

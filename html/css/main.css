@@ -6,6 +6,21 @@
 }
 
 html {
-    background-image: url("../media/background.jpeg");
+    background-image: url("../media/website-background.jpeg");
     background-size: cover;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.inputFlag{
+    flex: 1 1 100%;
+    order: -1;
+    text-align: left;
+    color: red;
+    font-size: smaller;
+    font-weight: bold;
+    padding-bottom: .3rem;
+
 }
